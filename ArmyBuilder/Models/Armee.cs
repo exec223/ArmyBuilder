@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace ArmyBuilder.Models
 {
-    enum Armee
+    public enum Armee
     {
-        Dunkeelfen,
+        Dunkelelfen,
         Imperium,
         Echsenmenschen
 
     }
+
+  
 }
