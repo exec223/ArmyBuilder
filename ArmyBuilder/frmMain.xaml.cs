@@ -28,12 +28,12 @@ namespace ArmyBuilder
         {
             InitializeComponent();
 
-            cboArmeeAuswahl.ItemsSource = Enum.GetValues(typeof(Armee)).Cast<Armee>();
+            cboArmeeAuswahl.ItemsSource = Enum.GetValues(typeof(Enums)).Cast<Enums>();
         }
 
         private void cboArmeeAuswahl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            NeueArmee.Armee = (Armee)cboArmeeAuswahl.SelectedItem;
+            NeueArmee.Armee = (Enums)cboArmeeAuswahl.SelectedItem;
             NeueArmee.Name = txtName.Text;
             NeueArmee.Punkte = Convert.ToInt32(txtPunkte.Text);
 

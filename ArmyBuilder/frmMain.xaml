@@ -5,11 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArmyBuilder"
         mc:Ignorable="d"
-        Title="MainWindow" Height="526.993" Width="771.355">
+        Title="MainWindow" Height="526.993" Width="1309.344">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="584*"/>
+            <ColumnDefinition Width="179*"/>
+        </Grid.ColumnDefinitions>
         <ComboBox x:Name="cboArmeeAuswahl"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="218" SelectionChanged="cboArmeeAuswahl_SelectionChanged"/>
         <TextBox x:Name="txtPunkte" PreviewTextInput="NumberValidationTextBox" HorizontalAlignment="Left" Height="23" Margin="308,10,0,0" TextWrapping="Wrap" Text="1500" VerticalAlignment="Top" Width="73" TextChanged="txtPunkte_TextChanged"/>
         <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" Margin="397,10,0,0" TextWrapping="Wrap" Text="Liste1" VerticalAlignment="Top" Width="98" TextChanged="txtName_TextChanged"/>
+        <ComboBox x:Name="cboKommandanten"  HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="218" SelectionChanged="cboArmeeAuswahl_SelectionChanged"/>
+
+        <ComboBox x:Name="cboKern"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="218" SelectionChanged="cboArmeeAuswahl_SelectionChanged" Margin="514,50,0,0"/>
+        <ComboBox x:Name="cboHelden"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="218" SelectionChanged="cboArmeeAuswahl_SelectionChanged" Margin="257,50,0,0"/>
+        <ComboBox x:Name="cboElite"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="218" SelectionChanged="cboArmeeAuswahl_SelectionChanged" Margin="768,50,0,0"/>
+        <ComboBox x:Name="cboSelten"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="218" SelectionChanged="cboArmeeAuswahl_SelectionChanged" Margin="31,50,0,0" Grid.Column="1"/>
 
     </Grid>
 </Window>

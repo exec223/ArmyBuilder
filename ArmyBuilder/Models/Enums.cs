@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArmyBuilder.Models
 {
-    public enum Armee
+    public enum Enums
     {
         Dunkelelfen,
         Imperium,
@@ -14,5 +14,17 @@ namespace ArmyBuilder.Models
 
     }
 
-  
+    public enum Kategorien
+    {
+        Charakter,
+        Kommandant,
+        Held,
+        Kern,
+        Elite,
+        Selten
+
+    }
+
+
+
 }

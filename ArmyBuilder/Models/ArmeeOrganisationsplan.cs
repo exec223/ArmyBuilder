@@ -14,58 +14,48 @@ namespace ArmyBuilder.Models
             {
                 _Punkte = value;
                 if (_Punkte < 2000)
-                    AuswahlAnzahl = new ArmeeAuswahlen
+                    AuswahlAnzahl = new List<ArmeeAuswahlTyp>
                     {
-                        Charakter = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 3 },
-                        Kommandanten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 0 },
-                        Helden = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 3 },
-                        Kerneinheiten = new ArmeeAuswahlTyp { Minimalwert = 2, MaximalWert = 999999 },
-                        EliteEinheiten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 3 },
-                        SelteneEinheiten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 1 }
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Charakter,Minimalwert = 0, MaximalWert = 3 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Kommandant,Minimalwert = 0, MaximalWert = 0 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Held, Minimalwert = 0, MaximalWert = 3 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Kern, Minimalwert = 2, MaximalWert = 999999 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Elite, Minimalwert = 0, MaximalWert = 3 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Selten, Minimalwert = 0, MaximalWert = 1 }
                     };
                 else if (_Punkte < 3000)
-                    AuswahlAnzahl = new ArmeeAuswahlen
+                    AuswahlAnzahl =  new List<ArmeeAuswahlTyp>
                     {
-                        Charakter = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 4 },
-                        Kommandanten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 1 },
-                        Helden = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 4 },
-                        Kerneinheiten = new ArmeeAuswahlTyp { Minimalwert = 3, MaximalWert = 999999 },
-                        EliteEinheiten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 4 },
-                        SelteneEinheiten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 2 }
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Charakter,Minimalwert = 0, MaximalWert = 4 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Kommandant ,Minimalwert = 0, MaximalWert = 1 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Held, Minimalwert = 0, MaximalWert = 4 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Kern, Minimalwert = 3, MaximalWert = 999999 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Elite, Minimalwert = 0, MaximalWert = 4 },
+                         new ArmeeAuswahlTyp {Kategorie=Kategorien.Selten, Minimalwert = 0, MaximalWert = 2 }
                     };
                 else if (_Punkte < 4000)
-                    AuswahlAnzahl = new ArmeeAuswahlen
+                    AuswahlAnzahl = new List<ArmeeAuswahlTyp>
                     {
-                        Charakter = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 6 },
-                        Kommandanten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 2 },
-                        Helden = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 6 },
-                        Kerneinheiten = new ArmeeAuswahlTyp { Minimalwert = 4, MaximalWert = 999999 },
-                        EliteEinheiten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 5 },
-                        SelteneEinheiten = new ArmeeAuswahlTyp { Minimalwert = 0, MaximalWert = 3 }
+                        new ArmeeAuswahlTyp {Kategorie=Kategorien.Charakter, Minimalwert = 0, MaximalWert = 6 },
+                        new ArmeeAuswahlTyp {Kategorie=Kategorien.Kommandant, Minimalwert = 0, MaximalWert = 2 },
+                        new ArmeeAuswahlTyp {Kategorie=Kategorien.Held, Minimalwert = 0, MaximalWert = 6 },
+                        new ArmeeAuswahlTyp {Kategorie=Kategorien.Kern, Minimalwert = 4, MaximalWert = 999999 },
+                        new ArmeeAuswahlTyp {Kategorie=Kategorien.Elite, Minimalwert = 0, MaximalWert = 5 },
+                        new ArmeeAuswahlTyp {Kategorie=Kategorien.Selten, Minimalwert = 0, MaximalWert = 3 }
                     };
             }
         }
-        public Armee Armee { get; set; }
-        public ArmeeAuswahlen AuswahlAnzahl { get; set; }
+        public Enums Armee { get; set; }
+        public List<ArmeeAuswahlTyp> AuswahlAnzahl { get; set; }
 
 
 
 
 
-    }
-
-    public class ArmeeAuswahlen
-    {
-        public ArmeeAuswahlTyp Charakter { get; set; }
-        public ArmeeAuswahlTyp Kommandanten { get; set; }
-        public ArmeeAuswahlTyp Helden { get; set; }
-        public ArmeeAuswahlTyp Kerneinheiten { get; set; }
-        public ArmeeAuswahlTyp EliteEinheiten { get; set; }
-        public ArmeeAuswahlTyp SelteneEinheiten { get; set; }
     }
 
     public class ArmeeAuswahlTyp
-    {
+    {   public Kategorien Kategorie {get;set;}
         public int Minimalwert { get; set; }
         public int MaximalWert { get; set; }
 
